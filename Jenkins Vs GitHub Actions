@@ -1,0 +1,33 @@
+-----------------------------Introduction----------------------------------------
+Jenkins and GitHub Actions both allow you to create workflows that automatically build, test, publish, release, and deploy code.
+Jenkins and GitHub Actions share some similarities in workflow configuration:
+
+    > Jenkins creates workflows using Declarative Pipelines, which are similar to GitHub Actions workflow files.
+    > Jenkins uses stages to run a collection of steps, while GitHub Actions uses jobs to group one or more steps or individual commands.
+    > Jenkins and GitHub Actions support container-based builds. For more information, see "Creating a Docker container action."
+    > Steps or tasks can be reused and shared with the community.
+
+---------------------------------Key Differences------------------------------------
+1) Jenkins has two types of syntax for creating pipelines: Declarative Pipeline and Scripted Pipeline.
+             > Declarative Pipeline:- Declarative pipelines are a more recent approach to the “pipeline-as-code” principle ,They are quite easy to write and understand.
+                                      The “pipeline” block is the main block that contains the entire declaration of a pipeline. 
+                                     # pipeline – contains the whole pipeline
+                                     # agent – defines the machine that will handle this pipeline
+                                     # stages – declares the stages of the pipeline
+                                     # steps – small operations inside a particular stage
+             > Scripted Pipeline:- Scripted pipelines were the first version of the “pipeline-as-code” principle. They were designed as a DSL build with Groovy and provide an outstanding level of power and flexibility.
+                                   However, this also requires some basic knowledge of Groovy, which sometimes isn’t desirable.These kinds of pipelines have fewer restrictions on the structure.
+                                   they have only two basic blocks: 
+                                    # Node - A “node” block specifies the machine that executes a particular pipeline.
+                                    # Stage - A "stage” blocks are used to group steps that, when taken together, represent a separate operation.
+
+1.1) Jenkins deployments are typically self-hosted, with users maintaining the servers in their own data centers.
+
+2) GitHub Actions uses YAML to create workflows and configuration files.
+
+2.1) itHub Actions offers a hybrid cloud approach by hosting its own runners that you can use to run jobs, while also supporting self-hosted runners.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
